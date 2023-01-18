@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentPage = 'home';
   title = 'examSnake';
+
+  changePage(page: string) {
+    this.currentPage = page;
+  }
 }
