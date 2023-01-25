@@ -1,31 +1,46 @@
-import { TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ AppComponent ]
+    })
+    .compileComponents();
+  }));
 
-  it(`should have as title 'examSnake'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('examSnake');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('examSnake app is running!');
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should show an error message when the player name is not entered', () => {
+    spyOn(window, 'alert');
+    component.playerEmail = 'test@example.com';
+    component.startGame();
+    expect(window.alert).toHaveBeenCalledWith('Please enter a valid name and email');
+  });
+
+  it('should show an error message when the player email is not entered', () => {
+    spyOn(window, 'alert');
+    component.playerName = 'Test Player';
+    component.startGame();
+    expect(window.alert).toHaveBeenCalledWith('Please enter a valid name and email');
+  });
+
+  it('should not show an error message when the player name and email are entered', () => {
+    spyOn(window, 'alert');
+    component.playerName = 'Test Player';
+    component.playerEmail = 'test@example.com';
+    component.startGame();
+    expect(window.alert).not.toHaveBeenCalled();
   });
 });

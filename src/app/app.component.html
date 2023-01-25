@@ -1,9 +1,31 @@
-<ngx-snake #game></ngx-snake>
+<div *ngIf="welcomePage">
+  <p> Witaj w grze! Wprowadź swoje dane, aby rozpocząć.</p>
+  <form>
+    <label>
+      Imię gracza:
+      <input [(ngModel)]="playerName" name="playerName" type="text">
+    </label>
+    <br>
+    <label>
+      Email gracza:
+      <input [(ngModel)]="playerEmail" name="playerEmail" type="email">
+    </label>
+    <br>
+    <button (click)="startGame()">Rozpocznij grę</button>
+    
+  </form>
+</div>
+<div *ngIf="showGame">
+  <ngx-snake #game (foodEaten)="incrementPoints()"></ngx-snake>
+  <button (click)="exitGame()">Wyjdź z gry</button>
+  <button (click)="game.actionStart()">Start</button>
+  <button (click)="game.actionStop()">Stop</button>
+  <button (click)="game.actionReset(); resetPoints()">Reset</button>
+  <button (click)="game.actionUp()">Up</button>
+  <button (click)="game.actionLeft()">Left</button>
+  <button (click)="game.actionRight()">Right</button>
+  <button (click)="game.actionDown()">Down</button>
+</div>
+<div> Liczba punktów: {{points}} </div>
+<div> Czas spędzony na grze: {{elapsedTimeString}} minut </div>
 
-<button (click)="game.actionStart()">Start</button>
-<button (click)="game.actionStop()">Stop</button>
-<button (click)="game.actionReset()">Reset</button>
-<button (click)="game.actionUp()">Up</button>
-<button (click)="game.actionLeft()">Left</button>
-<button (click)="game.actionRight()">Right</button>
-<button (click)="game.actionDown()">Down</button>

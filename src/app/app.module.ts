@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgxSnakeModule } from 'ngx-snake';
 import { AppComponent } from './app.component';
-import {NgxSnakeModule} from 'ngx-snake';
 
 @NgModule({
   declarations: [
@@ -10,6 +10,7 @@ import {NgxSnakeModule} from 'ngx-snake';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     NgxSnakeModule
   ],
   providers: [],
