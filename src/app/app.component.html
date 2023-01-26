@@ -1,4 +1,4 @@
-<div *ngIf="welcomePage">
+<div class="welcome-page game-bg" *ngIf="welcomePage">
   <p> Witaj w grze! Wprowadź swoje dane, aby rozpocząć.</p>
   <form>
     <label>
@@ -15,17 +15,28 @@
     
   </form>
 </div>
+<div class="game-container game-bg">
+  <div class="game-square">
 <div *ngIf="showGame">
   <ngx-snake #game (foodEaten)="incrementPoints()"></ngx-snake>
-  <button (click)="exitGame()">Wyjdź z gry</button>
-  <button (click)="game.actionStart()">Start</button>
-  <button (click)="game.actionStop()">Stop</button>
-  <button (click)="game.actionReset(); resetPoints()">Reset</button>
-  <button (click)="game.actionUp()">Up</button>
-  <button (click)="game.actionLeft()">Left</button>
-  <button (click)="game.actionRight()">Right</button>
-  <button (click)="game.actionDown()">Down</button>
+  <div class="game-controls">
+    <div class="game-button">
+      <button (click)="game.actionUp()">Up</button>
+      <button (click)="game.actionLeft()">Left</button>
+      <button (click)="game.actionRight()">Right</button>
+      <button (click)="game.actionDown()">Down</button>
+    </div>
+    <div class="game-start-stop">
+      <button (click)="game.actionStart()">Start</button>
+      <button (click)="game.actionStop()">Stop</button>
+    </div>
+    <div class="exit-button">
+      <button (click)="exitGame()">Wyjdź z gry</button>
+    </div>
+    <div class="reset-button">
+      <button (click)="game.actionReset()">Reset</button>
+    </div>
 </div>
-<div> Liczba punktów: {{points}} </div>
-<div> Czas spędzony na grze: {{elapsedTimeString}} minut </div>
-
+<div [class.hide-text]="!showGame">
+  Liczba punktów: {{points}} Czas spędzony na grze: {{elapsedTimeString}}
+</div>

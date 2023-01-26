@@ -1,18 +1,110 @@
+/* Welcome page styling */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin: 0 auto;
+  }
+  
+  label {
+  text-align: center;
+  margin-bottom: 10px;
+  }
+  
+  input {
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  }
+  
+  button {
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 20px;
+  }
+  
+  /* Game page styling */
+  .game-square {
+  margin: 0 auto;
+  text-align: center;
+  }
+  
+  .game-button {
+  float: right;
+  }
+  
+  button {
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 20px;
+  }
+  
+  /* Points and timer styling */
+  .points-timer {
+  text-align: center;
+  margin-top: 20px;
+  }
+  
+  .points-timer p {
+  margin-bottom: 10px;
+  }
+  
+  .points-timer span {
+  font-weight: bold;
+  }
+  
+  .exit-button{
+  text-align: right;
+  margin-right: 20px;
+  }
+  
+  .exit-button button{
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #ff0000;
+  color: white;
+  margin-bottom: 20px;
+  }
+  
+  .reset-button{
+  text-align: right;
+  margin-right: 20px;
+  }
+  .hide-text {
+  display: none;
+  }
+  
+  /* Welcome page center styling */
+  .welcome-page {
+    background-image: url('assets/Snake.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-input {
-  text-align: center;
-  margin: 10px 0;
+.game-square {
+    margin: 0 auto;
+    text-align: center;
 }
-.button {
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+
+.game-buttons {
+    float: right;
+}
+.points-timer {
   text-align: center;
+  margin-top: 20px;
+  clear:both;
 }
