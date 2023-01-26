@@ -84,10 +84,6 @@ form {
     background-image: url('assets/Snake.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
   .game-container {
     display: flex;
