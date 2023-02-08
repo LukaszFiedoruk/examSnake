@@ -1,28 +1,47 @@
 /* Welcome page styling */
-form {
+
+.welcome-page {
+  background-image: url('../assets/Snake.jpg');
+  background-size: cover;
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+}
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+  }
+  form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin-top: 300px;
+  
   }
   
   label {
   text-align: center;
   margin-bottom: 10px;
-  }
-  
-  input {
-  margin-bottom: 20px;
   padding: 12px 20px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  color: black;
   }
   
   button {
   padding: 12px 20px;
   border-radius: 4px;
-  background-color: #4CAF50;
-  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #66c269;
+  color: black;
   margin-bottom: 20px;
   }
   
@@ -33,74 +52,28 @@ form {
   }
   
   .game-button {
-  float: right;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
   }
   
   button {
   padding: 12px 20px;
   border-radius: 4px;
   background-color: #4CAF50;
-  color: white;
+  color: black;
   margin-bottom: 20px;
   }
+  
   
   /* Points and timer styling */
-  .points-timer {
-  text-align: center;
-  margin-top: 20px;
-  }
-  
-  .points-timer p {
-  margin-bottom: 10px;
-  }
-  
-  .points-timer span {
-  font-weight: bold;
-  }
-  
-  .exit-button{
-  text-align: right;
-  margin-right: 20px;
-  }
-  
-  .exit-button button{
-  padding: 12px 20px;
-  border-radius: 4px;
-  background-color: #ff0000;
-  color: white;
-  margin-bottom: 20px;
-  }
-  
-  .reset-button{
-  text-align: right;
-  margin-right: 20px;
-  }
-  .hide-text {
-  display: none;
-  }
-  
-  /* Welcome page center styling */
-  .welcome-page {
-    background-image: url('assets/Snake.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   .game-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.game-square {
-    margin: 0 auto;
-    text-align: center;
-}
-
-.game-buttons {
-    float: right;
-}
-.points-timer {
-  text-align: center;
-  margin-top: 20px;
-  clear:both;
+    background-image: url('../assets/play-snake-3.jpg');
+  background-size: cover;
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

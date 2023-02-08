@@ -1,5 +1,5 @@
 <div class="welcome-page game-bg" *ngIf="welcomePage">
-  <p> Witaj w grze! Wprowadź swoje dane, aby rozpocząć.</p>
+  <header> Witaj w grze! Wprowadź swoje dane, aby rozpocząć.</header>
   <form>
     <label>
       Imię gracza:
@@ -11,7 +11,7 @@
       <input [(ngModel)]="playerEmail" name="playerEmail" type="email">
     </label>
     <br>
-    <button (click)="startGame()">Rozpocznij grę</button>
+    <button (click)="startGame()">Ssss..start</button>
     
   </form>
 </div>
@@ -38,5 +38,5 @@
     </div>
 </div>
 <div [class.hide-text]="!showGame">
-  Liczba punktów: {{points}} Czas spędzony na grze: {{elapsedTimeString}}
+  Liczba punktów: {{points}} Czas spędzony na grze: {{elapsedTimeString}} minuty
 </div>

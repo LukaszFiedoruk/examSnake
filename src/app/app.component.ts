@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   playerName: string = '';
   playerEmail: string = '';
-  welcomePage = true;
-  showGame = false;
+  welcomePage = false;
+  showGame = true;
   points = 0;
   startTime: number = 0;
   elapsedTime: number = 0;
