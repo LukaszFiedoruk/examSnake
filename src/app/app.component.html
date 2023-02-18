@@ -8,7 +8,7 @@
     <br>
     <label>
       Email gracza:
-      <input [(ngModel)]="playerEmail" name="playerEmail" type="email">
+      <input [(ngModel)]="playerEmail" name="playerEmail" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
     </label>
     <br>
     <button (click)="startGame()">Ssss..start</button>
@@ -34,8 +34,9 @@
       <button (click)="exitGame()">Wyjdź z gry</button>
     </div>
     <div class="reset-button">
-      <button (click)="game.actionReset()">Reset</button>
+      <button (click)="game.actionReset(); resetPoints()">Reset</button>
     </div>
+    
 </div>
 <div [class.hide-text]="!showGame">
   Liczba punktów: {{points}} Czas spędzony na grze: {{elapsedTimeString}} minuty
